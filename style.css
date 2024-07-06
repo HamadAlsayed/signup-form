@@ -1,11 +1,13 @@
 :root {
-    --section-padding: 40px;
+    --section-padding: 50px;
     --main-color: #f0f0f0;
     --alt-color: #ffffff;
 
     --btn: cadetblue;
     --btn-hover: rgb(71, 117, 118);
     --btn-active: rgb(51, 84, 84);
+
+    --field-focus: #e5e7eb;
 }
 
 html,
@@ -13,7 +15,7 @@ body {
     min-height: 100vh;
     width: 100vw;
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -31,23 +33,28 @@ body {
     width: 40vw;
 }
 
-.image-sidebar img {
+.logo {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    width: 100%;
+}
+
+.logo > img {
+    display: block;
+    margin: auto;
+    width: 180px;
+    height: 180px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.image-sidebar .bg-img {
     position: absolute;
     height: 100vh;
+    max-height: 120vh;
     z-index: -1;
     filter: blur(1.5px);
 }
-
-/* .credit {
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    color: white;
-    font-size: 24px;
-    bottom: 0;
-    right: 50;
-    transform: translate(-50%, -50%);
-} */
 
 .content-container {
     display: flex;
@@ -73,7 +80,7 @@ body {
     flex: 1;
     padding: var(--section-padding);
     background-color: var(--alt-color);
-    box-shadow: 0px 0px 14px dimgray;
+    box-shadow: 0px 0px 10px var(--main-color);
     z-index: 1;
 }
 
@@ -106,7 +113,15 @@ label:hover {
 }
 
 .field input:focus {
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 10px var(--field-focus);
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid black;
 }
 
 .section {

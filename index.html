@@ -9,8 +9,11 @@
     <body>
         <div class="page-container">
             <div class="image-sidebar">
-                <img src="./content/background.jpg" alt="" />
+                <img src="./content/background.jpg" alt="" class="bg-img" />
                 <!-- <div class="credit"></div> -->
+                <div class="logo">
+                    <img src="./content/logo.png" alt="" />
+                </div>
             </div>
             <div class="content-container">
                 <div class="hook">
@@ -29,37 +32,70 @@
                         <div class="first-name field">
                             <label for="fname">First name</label>
                             <br />
-                            <input type="text" id="fname" name="fname" />
+                            <input
+                                type="text"
+                                id="fname"
+                                name="fname"
+                                required
+                            />
                         </div>
 
                         <div class="last-name field">
                             <label for="lname">Last Name</label>
                             <br />
-                            <input type="text" id="lname" name="lname" />
+                            <input
+                                type="text"
+                                id="lname"
+                                name="lname"
+                                required
+                            />
                         </div>
 
                         <div class="email field">
                             <label for="email">Email</label>
                             <br />
-                            <input type="text" id="email" name="email" />
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+                                required
+                            />
                         </div>
 
                         <div class="phone field">
                             <label for="phone">Phone Number</label>
                             <br />
-                            <input type="tel" id="phone" name="phone" />
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                            />
                         </div>
 
                         <div class="pass field">
                             <label for="pass">Password</label>
                             <br />
-                            <input type="password" id="pass" name="pass" />
+                            <input
+                                type="password"
+                                id="pass"
+                                name="pass"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                required
+                            />
                         </div>
 
                         <div class="pass field">
                             <label for="pass">Confirm Password</label>
                             <br />
-                            <input type="password" id="pass" name="pass" />
+                            <input
+                                type="password"
+                                id="pass"
+                                name="pass"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                required
+                            />
                         </div>
                     </form>
                 </div>
